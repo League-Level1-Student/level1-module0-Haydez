@@ -33,25 +33,58 @@ public class BodyPartQuiz {
 		// 1. Make an int variable to hold the score.
 
 		// 2. Set the size of the window in the initializeGui() method below
-
+		int s = 0;
 		for (int i = 0; i < 4; i++) {
 			
 			// 4. Ask the user who this person is and store their answer
 			String guess= JOptionPane.showInputDialog("who is this?");
-			
+			if (guess.equals("Arnold")) { 
+				s++;
+				JOptionPane.showMessageDialog(null, "correct!  Your score increased by 1"); 
+			}else{
+				JOptionPane.showMessageDialog(null, "incorrect!  Its Arnold");
+			}
 			// 5. Check their answer. If they guessed correctly:
 			// -- Tell them they are right and increase the score by 1
-
+			
 			// 6. Otherwise:
 			// -- Tell them they are wrong and who the person is
-
+			
 			// 7. Use the showNextImage() method below to get the next image
 			showNextImage();
 		    // 8. Show them their current score
-			
+			JOptionPane.showMessageDialog(null, "your current score is " + s);
 			// 9. .... repeat for all your images.....
-
-
+			String guessONE= JOptionPane.showInputDialog("who is this?");
+			if (guessONE.equals("Leonardo")) { 
+				s++;
+				JOptionPane.showMessageDialog(null, "correct!  Your score increased by 1"); 
+			}else{
+				JOptionPane.showMessageDialog(null, "incorrect!  Its Leonardo");
+			}
+			showNextImage();
+			JOptionPane.showMessageDialog(null, "your current score is " + s);
+			
+			
+			String guessTWO= JOptionPane.showInputDialog("who is this?");
+			if (guessTWO.equals("Morgan")) { 
+				s++;
+				JOptionPane.showMessageDialog(null, "correct!  Your score increased by 1"); 
+			}else{
+				JOptionPane.showMessageDialog(null, "incorrect!  Its Morgan");
+			}
+			showNextImage();
+			JOptionPane.showMessageDialog(null, "your current score is " + s);
+			
+			String guessTHREE= JOptionPane.showInputDialog("who is this?");
+			if (guessTHREE.equals("Jack")) { 
+				s++;
+				JOptionPane.showMessageDialog(null, "correct!  Your score increased by 1"); 
+			}else{
+				JOptionPane.showMessageDialog(null, "incorrect!  Its Jack");
+			}
+			showNextImage();
+			JOptionPane.showMessageDialog(null, "your current score is " + s);
 		}
 
 	}
@@ -75,7 +108,7 @@ public class BodyPartQuiz {
 		window.add(panel);
 		
 		// 3. Change the size of the window so that you can only see part of the image.		
-		window.setSize(500,500);
+		window.setSize(100,100);
 		
 		showNextImage();
 		
