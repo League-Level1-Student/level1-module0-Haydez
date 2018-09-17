@@ -8,9 +8,12 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 public class SoundFX implements ActionListener {
+	public static void main(String[] args) {
+		
+	}
 	public void showButton() {
 	     System.out.println("Button clicked");
-	
+	     
 	  JPanel panel = new JPanel();
 	    JFrame frame = new JFrame();
 	    frame.add(panel);
@@ -28,13 +31,16 @@ public class SoundFX implements ActionListener {
 	    button3.setText("m'ladee");
 	    button4.setText("po-op");
 	    button1.addActionListener(this);
+	    button2.addActionListener(this);
+	    button3.addActionListener(this);
+	    button4.addActionListener(this);
 	    frame.pack();
 	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
-		
+		playSound("cymbal.wav");
 	}
 	private void playSound(String fileName) {
 	     AudioClip sound = JApplet.newAudioClip(getClass().getResource(fileName)); 
